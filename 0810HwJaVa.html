@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var a = +prompt("введить начало диапозона");  // задача 1 
+         var n = +prompt("введить конец диапозона");
+         var sum = 0;
+         while (a <= n) {
+             sum += a;
+             a++;
+         }
+         alert(sum)
+ 
+ 
+         var str1, str2;    //задача2
+         str1 = prompt("Введите первое число", '');
+         var num1 = parseInt(str1);
+         str2 = prompt("Введите второе число", '');
+         var num2 = parseInt(str2);
+         var delitel = 0, p, r;
+         if (num1 < num2) {
+             p = num2; num2 = num1; num1 = p;
+         }
+         do {
+             if (num1 % num2 == 0) {
+                 delitel = num2;
+             }
+             else {
+                 r = num2;
+                 num2 = num1 % num2;
+                 num1 = r;
+                 delitel = num2;
+             }
+         }
+         while (num1 % num2 != 0);
+         if (delitel != 1) {
+             alert("Наибольшим общим делителем чисел" + str1 + " и " + str2 + " является число..." + delitel);
+         }
+         else {
+             alert("Общего делителя нет");
+         }
+ 
+ 
+         var n = +prompt ("Введите число" ); //задача3
+         for (i = 1; i < n ; i++);
+             if ( n % i == 0)
+                 str += String(i) + "";
+         alert(str);
+         str = "";
+
+
+
+        do {
+        a = +prompt(" Пользователь введи число  !"); // Задание 6 
+        n = +prompt(" Пользователь введи число  !");
+        var n1 = prompt(" Пользователь введи знак  !");
+        switch (n1) {
+        case "-": alert(a - n); break;
+        case "+": alert((a + n)); break;
+        case "/": alert(a / n); break;
+        case "*": alert(a * n); break;
+
+         }
+
+          } while (confirm("Хотите решить еще"))
+
+
+
+
+       for (let j = 1; j <= 10; j++) {          //9 задача
+        for (let i = 2; i <= 9; i++) {
+        confirm(i + "*" + j + "=" + (i * j));
+
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
